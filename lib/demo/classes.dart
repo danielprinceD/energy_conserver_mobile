@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class BuildingClass {
     int id;
     String name;
@@ -16,4 +18,12 @@ class BlockClass {
 class DeviceClass{
   int id; String name;
   DeviceClass(this.id , this.name);
+}
+
+class PieChartOverall{
+    MaterialColor color;
+    double value;
+    String title;
+    double radius;
+    PieChartOverall(this.color , this.value , this.radius , this.title);
 }

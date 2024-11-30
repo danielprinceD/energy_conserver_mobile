@@ -45,3 +45,17 @@ class NavBarUtil{
     }
   ];
 }
+
+class SidebarUtil {
+    static const double width = 200;
+    static const List<Map<String , dynamic>> items = [
+       {
+        'icon' : Icons.electric_bolt,
+        'label' : 'Energy Resource'
+       },
+      {
+        'icon': Icons.water,
+        'label' : 'Water Resource' 
+      }
+    ];
+}

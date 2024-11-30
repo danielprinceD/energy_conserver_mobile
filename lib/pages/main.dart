@@ -21,11 +21,10 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
+        backgroundColor: const Color(AppData.bgColor) ,
       toolbarHeight: 40,
-      backgroundColor: NavBarUtil.bgColor,
-      title: Text("Home Page" , style: TextStyle(fontSize: 16 , color: NavBarUtil.color),),
       leading: IconButton(
-        icon: const Icon(Icons.menu , color: NavBarUtil.color,),
+        icon: const Icon(Icons.menu  ),
         onPressed: () {
          _scaffoldKey.currentState?.openDrawer(); // Open the drawer when menu is pressed
         },
