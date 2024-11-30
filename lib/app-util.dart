@@ -9,12 +9,14 @@ import 'package:line_icons/line_icons.dart';
 class AppData{
     
     static const String appTitle = "Energy Conserver";
+    static const int bgColor = 0x99EEFFF6;
     static const List pages = [
         MyDuty(),
         HomePage(), 
         MyChats() ,
         MyProfile()
     ];
+    static const int pageStartsFrom = 1;
 }
 
 class NavBarUtil{
