@@ -14,7 +14,7 @@ class AppData{
         MyDuty(),
         HomePage(), 
         MyChats() ,
-        MyProfile()
+        ProfilePage1()
     ];
     static const int pageStartsFrom = 0;
 }

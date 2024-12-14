@@ -34,8 +34,8 @@ class _OverallPieChartState extends State<OverallPieChart> {
   Widget build(BuildContext context) {
     return PieChart(
       PieChartData(
-            sectionsSpace: 0, // Space between sections
-            centerSpaceRadius: 10, // Space in the middle
+            sectionsSpace: 2, // Space between sections
+            centerSpaceRadius: 30, // Space in the middle
             sections: showingSections(),
             borderData: FlBorderData(show: false),
       )
