@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               children: [
-                Expanded(child: Container( child:   Text("Overall Energy Resource" ,style: TextStyle(fontSize: 16 ) , textAlign: TextAlign.left  )  , padding:EdgeInsets.only(top: 10 , bottom: 10 , left: 40))) ,
+                 Expanded(child:  Container(  child:   Text("Overall Energy Resource" ,style: TextStyle(fontSize: 16 ) , textAlign: TextAlign.left  )  , padding:EdgeInsets.only(top: 10 , bottom: 10 , left: 40))) ,
               ],
             ),
            const Row(

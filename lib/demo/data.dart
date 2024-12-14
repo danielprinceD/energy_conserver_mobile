@@ -9,17 +9,17 @@ List<BuildingClass> buildings = [
 ];
 
 List<BlockClass> blocks = [
-  BlockClass(1, "Block 1", "Owner 1", 10),
-   BlockClass(2, "Block 2", "Owner 2", 20),
-    BlockClass(3, "Block 3", "Owner 3", 4),
-     BlockClass(4, "Block 4", "Owner 4", 4),
-      BlockClass(5, "Block 5", "Owner 5", 4),
-       BlockClass(6, "Block 6", "Owner 6", 4),
-        BlockClass(7, "Block 7", "Owner 7", 4),
-         BlockClass(8, "Block 8", "Owner 8", 4),
-          BlockClass(9, "Block 9", "Owner 9", 4),
-          BlockClass(10, "Block 10", "Owner 10", 4),
-          BlockClass(11, "Block 11", "Owner 11", 4),
+  BlockClass(1, "Block 1", "Owner 1", blockDevices[1]!.length),
+   BlockClass(2, "Block 2", "Owner 2", blockDevices[2]!.length),
+    BlockClass(3, "Block 3", "Owner 3", blockDevices[3]!.length),
+     BlockClass(4, "Block 4", "Owner 4", blockDevices[4]!.length),
+      BlockClass(5, "Block 5", "Owner 5", blockDevices[5]!.length),
+       BlockClass(6, "Block 6", "Owner 6", blockDevices[6]!.length),
+        BlockClass(7, "Block 7", "Owner 7", blockDevices[7]!.length),
+         BlockClass(8, "Block 8", "Owner 8", blockDevices[8]!.length),
+          BlockClass(9, "Block 9", "Owner 9", blockDevices[9]!.length),
+          BlockClass(10, "Block 10", "Owner 10", blockDevices[10]!.length),
+          BlockClass(11, "Block 11", "Owner 11", blockDevices[11]!.length),
 
 
 ];

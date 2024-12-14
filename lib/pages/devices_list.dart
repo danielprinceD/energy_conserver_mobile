@@ -1,5 +1,4 @@
 import 'package:energy_conserver_mobile/demo/classes.dart';
-import 'package:energy_conserver_mobile/detail_page/building_details.dart';
 import 'package:energy_conserver_mobile/detail_page/device_details.dart';
 import 'package:flutter/material.dart';
 
