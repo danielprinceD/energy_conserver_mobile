@@ -1,5 +1,7 @@
 import 'package:energy_conserver_mobile/demo/classes.dart';
 import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
+import 'dart:math';
 
 List<BuildingClass> buildings = [
    BuildingClass(1, "Building 1", "Daniel Prince") ,
@@ -75,3 +77,17 @@ List<PieChartOverall> overallPieChart = [
   PieChartOverall(Colors.orange, 25, 100, "Title 3"),
   PieChartOverall(Colors.green, 25, 100, "Title 4"),
 ];
+
+class LineChartClass {
+  final double x , y;
+  LineChartClass({required this.x , required this.y});
+}
+
+List<double> generateRandomValues(int count, int min, int max) {
+    final random = Random();
+    return List<double>.generate(count, (index) => random.nextInt(max - min + 1).toDouble() + min);
+  }
+
+List<LineChartClass> getLineChartData(List<double> values) {
+    return values.mapIndexed((idx , val) => LineChartClass(x: idx.toDouble() , y: val)).toList();
+}
