@@ -41,7 +41,7 @@ class _MyDevicesState extends State<MyDevices> {
                             width: 1
                           )
                         ),
-                        padding: EdgeInsets.only(top: 20 ,bottom: 20, left: 10),
+                        padding: const EdgeInsets.only(top: 20 ,bottom: 20, left: 10),
                         child: Text( "${device.key + 1}."+ device.value.name),
                       ),
                     ),
@@ -50,6 +50,6 @@ class _MyDevicesState extends State<MyDevices> {
               ),
             ),).toList()
           ,
-        );;
+        );
   }
 }

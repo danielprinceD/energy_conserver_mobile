@@ -18,6 +18,6 @@ class _MySliderState extends State<MySlider> {
         controller: SidebarXController(selectedIndex: -1 , extended:  true),
         items : SidebarUtil.items.map((item)=>SidebarXItem(icon: item['icon'], label: item['label'] )).toList()
             ),
-      );;
+      );
   }
 }

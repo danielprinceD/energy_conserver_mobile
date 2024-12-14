@@ -1,6 +1,5 @@
 
 import 'package:energy_conserver_mobile/components/piechart/overall_resource.dart';
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
