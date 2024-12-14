@@ -1,29 +1,30 @@
-import 'package:energy_conserver_mobile/demo/data.dart';
+import 'package:energy_conserver_mobile/demo/classes.dart';
 import 'package:energy_conserver_mobile/detail_page/building_details.dart';
+import 'package:energy_conserver_mobile/detail_page/device_details.dart';
 import 'package:flutter/material.dart';
 
-class MyBuildings extends StatefulWidget {
-  const MyBuildings({super.key});
+class MyDevices extends StatefulWidget {
+  final List<DeviceClass> ? devices;
+  const MyDevices({super.key , required this.devices});
 
   @override
-  State<MyBuildings> createState() => _MyBuildingsState();
+  State<MyDevices> createState() => _MyDevicesState();
 }
 
-class _MyBuildingsState extends State<MyBuildings> {
+class _MyDevicesState extends State<MyDevices> {
   @override
   Widget build(BuildContext context) {
-    return 
-        Column(
+    return Column(
           children:
-            buildings.asMap().entries.map((build)=>Padding(
+           ( widget.devices ?? []).asMap().entries.map((device)=>Padding(
               padding: const EdgeInsets.all(2.0),
               child: GestureDetector(
                 onTap: () => {
                   Navigator.push(
                     context , 
                     MaterialPageRoute(
-                      builder: (context) => BuildingDetails(
-                        building : build.value
+                      builder: (context) => MyDeviceDetail(
+                          device: device.value,
                       )
                       )
                   )
@@ -42,7 +43,7 @@ class _MyBuildingsState extends State<MyBuildings> {
                           )
                         ),
                         padding: EdgeInsets.only(top: 20 ,bottom: 20, left: 10),
-                        child: Text( "${build.key+1}."+ build.value.name),
+                        child: Text( "${device.key + 1}."+ device.value.name),
                       ),
                     ),
                   ],
@@ -50,6 +51,6 @@ class _MyBuildingsState extends State<MyBuildings> {
               ),
             ),).toList()
           ,
-        );
+        );;
   }
 }

@@ -42,7 +42,7 @@ class _MainPageState extends State<MainPage> {
             })
           },
         ),
-      drawer: const MySlider()
+        drawer: const MySlider()
     
     );
   }

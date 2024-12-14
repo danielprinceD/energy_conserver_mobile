@@ -16,7 +16,15 @@ class AppData{
         MyChats() ,
         MyProfile()
     ];
-    static const int pageStartsFrom = 1;
+    static const int pageStartsFrom = 0;
+}
+
+class AppBarHeader {
+  static const bgColor = Colors.black;
+  static const frColor = Colors.white;
+  static const iconColor = IconThemeData(
+     color: Colors.white
+  );
 }
 
 class NavBarUtil{
