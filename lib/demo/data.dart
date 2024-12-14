@@ -71,12 +71,44 @@ Map<int , List<DeviceClass> > blockDevices = {
 };
 
 
-List<PieChartOverall> overallPieChart = [
-  PieChartOverall( Colors.blue  , 50, 100, "Title 1"),
-  PieChartOverall( Colors.red , 15, 100, "Title 2"),
-  PieChartOverall(Colors.orange, 25, 100, "Title 3"),
-  PieChartOverall(Colors.green, 25, 100, "Title 4"),
-];
+double generateRand({double min = 10, double max = 50}) {
+  Random random = Random();
+  return min + random.nextDouble() * (max - min);
+}
+
+List<PieChartOverall> generatePieChartData(int numberOfSlices) {
+  Random random = Random();
+  List<PieChartOverall> pieChartData = [];
+  
+  double sum = 0;
+  // Generate random values for pie chart slices
+  for (int i = 0; i < numberOfSlices; i++) {
+    double value1 = generateRand(min: 5, max: 30);  // Random value for the first data point
+    double value2 = generateRand(min: 5, max: 30);  // Random value for the second data point
+    
+    // Keep track of the sum of the values to adjust later
+    sum += value1 + value2;
+    
+    pieChartData.add(
+      PieChartOverall(
+      Colors.primaries[random.nextInt(Colors.primaries.length)], 
+      value1, 
+      value2, 
+      100 ,
+      'Title ${String.fromCharCode(65 + i)}',
+    ));
+  }
+
+  // Normalize the values so their total equals 100 (or 1)
+  for (var data in pieChartData) {
+    data.value1 = (data.value1 / sum) * 100;
+    data.value2 = (data.value2 / sum) * 100;
+  }
+
+  return pieChartData;
+}
+
+
 
 class LineChartClass {
   final double x , y;

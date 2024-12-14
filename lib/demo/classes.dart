@@ -22,8 +22,9 @@ class DeviceClass{
 
 class PieChartOverall{
     MaterialColor color;
-    double value;
+    double value1;
+    double value2;
     String title;
     double radius;
-    PieChartOverall(this.color , this.value , this.radius , this.title);
+    PieChartOverall(this.color , this.value1 ,  this.value2 , this.radius , this.title );
 }

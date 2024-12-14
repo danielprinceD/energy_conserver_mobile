@@ -3,20 +3,25 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
 class OverallPieChart extends StatefulWidget {
-  const OverallPieChart({super.key});
+  final int count;
+  final bool isDevice;
+  
+  const OverallPieChart({super.key , required this.count ,required this.isDevice } );
+
+  
 
   @override
   State<OverallPieChart> createState() => _OverallPieChartState();
 }
 
 class _OverallPieChartState extends State<OverallPieChart> {
-
+  final List<String> deviceChart = ['Mrng' , 'Aftnoon' , 'Nyt'];
   List<PieChartSectionData> showingSections(){
-    return overallPieChart.map((chart)=> PieChartSectionData(
-      color: chart.color ,
-      value: chart.value ,
-      title: chart.title ,
-      radius: chart.radius ,
+    return generatePieChartData(widget.count).asMap().entries.map((chart)=> PieChartSectionData(
+      color: chart.value.color ,
+      value: chart.value.value1 + chart.value.value2 ,
+      title: widget.isDevice ? deviceChart[chart.key]  :  chart.value.title  ,
+      radius: chart.value.radius ,
       titleStyle: const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,

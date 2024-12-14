@@ -48,18 +48,18 @@ class _HomePageState extends State<HomePage> {
            const Row(
               children: [
                 Expanded(
-                  child: SizedBox( child: OverallPieChart() , height: 270 )) ,
+                  child: SizedBox( child: OverallPieChart(count: 4, isDevice: false,) , height: 270 )) ,
               ],
             ),
              Row(
               children: [
-                Expanded(child: Container( child:   Text("Overall Water Resource" ,style: TextStyle(fontSize: 16 ) , textAlign: TextAlign.left  )  , padding:EdgeInsets.only(top: 10 , bottom: 10 , left : 40))) ,
+                Expanded(child: Container( child:   Text("Overall Water Resource"  ,style: TextStyle(fontSize: 16 ) , textAlign: TextAlign.left  )  , padding:EdgeInsets.only(top: 10 , bottom: 10 , left : 40))) ,
               ],
             ),
            const Row(
               children: [
                 Expanded(
-                  child: SizedBox( child: OverallPieChart() , height: 270 )) ,
+                  child: SizedBox( child: OverallPieChart(count: 4, isDevice: false,) , height: 270 )) ,
               ],
             ),
           ]
