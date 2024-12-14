@@ -22,7 +22,11 @@ class _MyDeviceDetailState extends State<MyDeviceDetail> {
         child: MyAppBar(title: "${widget.device.name} Details",
       )
       ),
-      body: DeviceLiveChart( title: "${widget.device.name} Live Data" , left : "KWatts" , bottom: "Time" , points: getLineChartData(generateRandomValues(10 , 5 , 40))).setLeftInterval(5).setBottomInterval(1),
+      body: Column(
+        children: [
+          MyLiveLineChart( title: "${widget.device.name} Live Data" , left : "KWatts" , bottom: "Time").setLeftInterval(2).setBottomInterval(3),
+        ],
+      ) 
     );
   }
 }
